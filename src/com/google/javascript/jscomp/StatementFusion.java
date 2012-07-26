@@ -50,7 +50,7 @@ public class StatementFusion extends AbstractPeepholeOptimization {
     }
 
     // Nothing to do here.
-    if (!block.hasChildren() || block.hasOneChild()) {
+    if (!block.hasChildren() || block.hasOneChild() || block.getChildCount() > 1) {
       return false;
     }
 
